@@ -6,6 +6,6 @@ This repo uses application which makes every embedded systems engineer feel good
 
 In Arduino Uno Board -> **we have ATmega328P microcontroller** --> with an 8-bit AVR microprocessor
 
-To find the exact pin-to-register or port mapping, you should look for the ATmega microcontroller datasheet or an Arduino pinout diagram
+To find the exact pin-to-register or port mapping, the ATmega microcontroller datasheet or an Arduino pinout diagram should be referred.
 
 <img width="1920" height="1080" alt="Untitled presentation (4)" src="https://github.com/user-attachments/assets/b33ec8e3-aee9-4847-859a-dc6313168f4c" />

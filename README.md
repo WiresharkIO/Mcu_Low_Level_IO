@@ -56,9 +56,18 @@ The CPU doesn’t “know” which is which; it just sees an address and execute
 
 To find the exact pin-to-register or port mapping, the ATmega microcontroller datasheet or an Arduino pinout diagram should be referred.
 
+
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
+
 > Why
 
-This primer will also enhance comfortability in referring datasheets, accessing addresses, defining pointer, and doing bitwise operations for bit manipulation in a register.
+- This primer will also enhance comfortability in referring datasheets, accessing addresses, defining pointer, and doing bitwise operations for bit manipulation in a register.
 
+- For resource constrained devices and applications that consumes significant flash, register level bit manipulation could cut corners in terms of flash utilization.
+
+
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 > References
+1. https://docs.arduino.cc/learn/programming/memory-guide/
+2. https://www.geeksforgeeks.org/computer-organization-architecture/difference-between-von-neumann-and-harvard-architecture/

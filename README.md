@@ -37,14 +37,20 @@ STM32 nano or discovery boards -> with say STM32wb5mmg controller --> with an AR
 <img width="1920" height="1080" alt="Untitled presentation (4)" src="https://github.com/user-attachments/assets/b33ec8e3-aee9-4847-859a-dc6313168f4c" />
 
 On an AVR like the ATmega328P, what’s happening is:
+- It follows a _Pure Harvard Architecture_, meaning a completely separate memory spaces, wires, and addresses for code and data (a naive way is to look for the start addresses of each of the memory spaces, it all starts from 0x000...0 but in Pure _Von Neumann Architecture_, one unified memory space for everything with distinct addresses so 0x000...0 will be present only once in that entire memory space).
+- There is one unified _**data address space**_ the CPU uses for load/store instructions.
 
-There is one unified data address space the CPU uses for load/store instructions.
+
+<img width="1474" height="1043" alt="Untitled presentation (6)" src="https://github.com/user-attachments/assets/bf4bb3de-0f32-4b66-bf48-196e4523e2fb" />
+
+
+ 
 
 Inside that address space, different ranges are wired to different things:
 
 - A chunk is SRAM (normal variables, stack, etc.).
-
-- A chunk is I/O registers (DDRB, PORTB, PINB, timers, UART, etc.).
+- A chunk is I/O registers (DDRB, PORTB, PINB, etc.).
+- General Purpose Registers (which the CPU uses to load and store data for immediate math operations).
 
 The CPU doesn’t “know” which is which; it just sees an address and executes a normal read/write. The chip’s internal bus logic decides whether that address hits RAM or a peripheral register.
 

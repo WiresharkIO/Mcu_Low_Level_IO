@@ -1,4 +1,4 @@
-<img width="850" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 
 > Introduction
@@ -9,7 +9,7 @@ To make anything work, we as humans need to access some information related to t
 Similarly if you think of any embedded system, the core, all the logic boils down to some bit flips which is stored in a particular space (a memory), identified by an address for ease of accessing (unlike humans).
 
 
-<img width="850" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 > Memory-mapped I/O (MMIO)
 
@@ -20,7 +20,9 @@ so these load/store/read/write all are contributing to perform some function, it
 In this primer, we see how memory mapped IO can be controlled by using **_direct register access_** and through **_software abstraction_** library, in both case the code deals with a particular address and a value present at that address to control something, here control could mean controlling the pitch of an aircraft fan blades to controlling a simple LED.
 
 
-<img width="850" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
+
+> Arduino IO interaction
 
 This repo uses application which makes every embedded systems engineer feel good about themselves.. "Blink LED at a particular rate"
 
@@ -28,9 +30,8 @@ This repo uses application which makes every embedded systems engineer feel good
 We employ Arduino Uno, for the first application as it is the most simplest board known for prototyping and experimenting.
 In Arduino Uno Board -> **we have ATmega328P microcontroller** --> with an 8-bit AVR microprocessor.
 
-If we have to mental map it to other boards we can take an example of STM32 where we have,
-
-STM32 nano or discovery boards -> with say STM32wb5mmg controller --> with an ARM cortex M4F processor..
+[If we have to mentally map it to other boards we can take an example of STM32 where we have,
+STM32 nano or discovery boards -> with say STM32wb5mmg controller --> with an ARM cortex M4F processor..]
 
 
 <img width="1920" height="1080" alt="Untitled presentation (4)" src="https://github.com/user-attachments/assets/b33ec8e3-aee9-4847-859a-dc6313168f4c" />
@@ -41,9 +42,9 @@ There is one unified data address space the CPU uses for load/store instructions
 
 Inside that address space, different ranges are wired to different things:
 
-A chunk is SRAM (normal variables, stack, etc.).
+- A chunk is SRAM (normal variables, stack, etc.).
 
-A chunk is I/O registers (DDRB, PORTB, PINB, timers, UART, etc.).
+- A chunk is I/O registers (DDRB, PORTB, PINB, timers, UART, etc.).
 
 The CPU doesn’t “know” which is which; it just sees an address and executes a normal read/write. The chip’s internal bus logic decides whether that address hits RAM or a peripheral register.
 

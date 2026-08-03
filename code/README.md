@@ -3,7 +3,7 @@
 
 > Traversing from user-code to address
 
-- version - 1 Journey through the Arduino framework's source files
+- version - 1 Through the Arduino framework's source files
 
  ```arduino
  void setup() {
@@ -17,6 +17,9 @@
    delay(500);
  }
  ```
+
+<img width="1894" height="981" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/365aff73-8cee-4c8d-a1ba-a9288941dc16" />
+
 
 - version - 2 Direct register level accessing of the same
 

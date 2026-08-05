@@ -18,7 +18,7 @@
  }
  ```
 
-<img width="1920" height="1080" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/fef23d7d-3572-4117-ab3f-58a27a74e89c" />
+<img width="1920" height="1080" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/b09769b3-760c-4263-871c-2ebd0209f6d9" />
 
 Until now, the code uses simple human understandable way of performing a function.
 

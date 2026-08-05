@@ -1,7 +1,7 @@
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 
-> Traversing from user-code to address
+> Traversing from user-code to address/memory
 
 - version - 1 Through the Arduino framework's source files
 
@@ -20,7 +20,9 @@
 
 <img width="1920" height="1080" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/fef23d7d-3572-4117-ab3f-58a27a74e89c" />
 
+Until now, the code uses simple human understandable way of performing a function.
 
+The Clock Speed	16 is MHz for this board, which makes one wonder how long will it take to perform a functionality with this sort of sw abstraction?, and how will it compare to alternate implementations?, and when the application scales up could these difference in latency, memory and other resource parameters, between different approaches matter?
 
 - version - 2 Direct register level accessing of the same
 

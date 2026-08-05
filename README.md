@@ -1,7 +1,7 @@
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 
-> Introduction
+> $\color{blue}{\text{Introduction}}$
 
 To make anything work, we as humans need to access some information related to that particular work. We do that so, by either recalling our prior knowledge or if the work is novel we need to build-up the knowledge, but in any case, all the information whether relevant or irrelevant ends up in our memory.
 
@@ -11,7 +11,7 @@ Similarly if you think of any embedded system, the core, all the logic boils dow
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-> Memory-mapped I/O (MMIO)
+>  $\color{blue}{\text{Memory-mapped I/O (MMIO)}}$ 
 
 **Memory-mapped I/O** assigns hardware peripheral registers to specific physical addresses in the standard memory space. The CPU uses regular load and store instructions to read or write to these addresses just like normal RAM.
 
@@ -22,7 +22,7 @@ In this primer, we see how memory mapped IO can be controlled by using **_direct
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-> Arduino IO interaction
+> $\color{blue}{\text{Arduino IO interaction}}$
 
 This repo uses application which makes every embedded systems engineer feel good about themselves.. "Blink LED at a particular rate"
 
@@ -59,15 +59,16 @@ To find the exact pin-to-register or port mapping, the ATmega microcontroller da
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-> Why
+> $\color{blue}{\text{Why this analysis what's the point?}}$
 
 - This primer will also enhance comfortability in referring datasheets, accessing addresses, defining pointer, and doing bitwise operations for bit manipulation in a register.
 
 - For resource constrained devices and applications that consumes significant flash, register level bit manipulation could cut corners in terms of flash utilization.
-
+  
+- This will tell that on bare metal how does any software perform, that is with just the interaction with the core nature of the hardware how does any functionality perform in terms of resource consumption.
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-> References
+> $\color{blue}{\text{References:}}$
 1. https://docs.arduino.cc/learn/programming/memory-guide/
 2. https://www.geeksforgeeks.org/computer-organization-architecture/difference-between-von-neumann-and-harvard-architecture/

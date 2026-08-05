@@ -22,7 +22,7 @@
 
 Until now, the code uses simple human understandable way of performing a function.
 
-The Clock Speed	16 is MHz for this board, which makes one wonder how long will it take to perform a functionality with this sort of sw abstraction?, and how will it compare to alternate implementations?, and when the application scales up could these difference in latency, memory and other resource parameters, between different approaches matter?
+The $\color{blue}{\text{Clock Speed	is 16 MHz}}$ for this board, which makes one wonder how long will it take to perform a functionality with this sort of sw abstraction?, and how will it compare to alternate implementations?, and when the application scales up could these difference in latency, memory and other resource parameters, between different approaches matter?
 
 - version - 2 Direct register level accessing of the same
 
@@ -30,3 +30,5 @@ The Clock Speed	16 is MHz for this board, which makes one wonder how long will i
 > References
 1. https://docs.arduino.cc/learn/programming/memory-guide/
 2. https://www.geeksforgeeks.org/computer-organization-architecture/difference-between-von-neumann-and-harvard-architecture/
+
+

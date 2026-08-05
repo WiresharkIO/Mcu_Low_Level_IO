@@ -72,3 +72,11 @@ To find the exact pin-to-register or port mapping, the ATmega microcontroller da
 > $\color{blue}{\text{References:}}$
 1. https://docs.arduino.cc/learn/programming/memory-guide/
 2. https://www.geeksforgeeks.org/computer-organization-architecture/difference-between-von-neumann-and-harvard-architecture/
+
+
+> $\color{Red}{\text{TO DO:}}$
+1. Calculate latencies (document flash usage)
+2. Adapting register level access in STM32 or ESP32 type boards
+3. Adapting this to a medium sized application with reduced invocations to abstractions
+4. compare latencies, flash (if possible power) across Arduino, STM32 (or ESP32) based platforms
+5. reasoning and observations for optimization based the analysis

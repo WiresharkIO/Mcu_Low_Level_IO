@@ -18,7 +18,8 @@
  }
  ```
 
-<img width="1894" height="981" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/365aff73-8cee-4c8d-a1ba-a9288941dc16" />
+<img width="1920" height="1080" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/fef23d7d-3572-4117-ab3f-58a27a74e89c" />
+
 
 
 - version - 2 Direct register level accessing of the same

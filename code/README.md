@@ -12,7 +12,7 @@
  
  void loop() {
    digitalWrite(LED_BUILTIN, HIGH);
-   delay(500);
+   delay(500); <--- just to see the blink properly,.
    digitalWrite(LED_BUILTIN, LOW);
    delay(500);
  }

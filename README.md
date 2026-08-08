@@ -80,3 +80,9 @@ To find the exact pin-to-register or port mapping, the ATmega microcontroller da
 3. Adapting this to a medium sized application with reduced invocations to abstractions
 4. compare latencies, flash (if possible power) across Arduino, STM32 (or ESP32) based platforms
 5. reasoning and observations for optimization based the analysis
+
+> $\color{blue}{\text{Basics}}$
+The processor can interact to data either from LOAD or STORE instruction.
+LOAD - loads data from memory to processors reg.
+STORE - stores from register to memory.
+In Assembly MOV isntruction is used to interact with data, but the problem is that a MOV cannot differentiate between different types or memory for example RAM or GPU or any other device such as a network with servers.. Assume all these devices have a particular address 0x1000200 now how will the processor differentiate which memory to interact with?

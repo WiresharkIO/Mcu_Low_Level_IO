@@ -22,7 +22,13 @@
 
 Until now, the code uses simple human understandable way of performing a function.
 
-The $\color{blue}{\text{Clock Speed	is 16 MHz}}$ for this board, which makes one wonder how long will it take to perform a functionality with this sort of sw abstraction?, and how will it compare to alternate implementations?, and when the application scales up could these difference in latency, memory and other resource parameters, between different approaches matter?
+(refer: https://arduinogetstarted.com/arduino-language-reference)
+
+
+
+The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per second. Each cycle lasts approximately $62.5\\text{ns}$) for this board, which makes one wonder how long will it take to perform a functionality with this sort of sw abstraction?, and how will it compare to alternate implementation with direct register accessing?, and when the application scales up could these difference in latency, memory and other resource parameters, produce the better sw in the optimization space (accepting the fact that the code reduces the readability)?
+
+
 
 - version - 2 Direct register level accessing of the same
 

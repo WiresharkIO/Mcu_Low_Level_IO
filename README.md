@@ -24,7 +24,11 @@ In this primer, we see how memory mapped IO can be controlled by using **_direct
 
 > $\color{blue}{\text{Arduino IO interaction}}$
 
-This repo uses application which makes every embedded systems engineer feel good about themselves.. "Blink LED at a particular rate"
+This repo uses application which makes every embedded systems engineer feel good about themselves..
+
+"Blink LED at a particular rate" as the first use-case..
+
+Then we will be looking into some embedded ai based applications, where we keep the model params constant but try to make the supporting firmware a bit more optimized by this approach (we don't know that yet for sure whether it will produce any effect or not, we need to evaluate it)..
 
 
 We employ Arduino Uno, for the first application as it is the most simplest board known for prototyping and experimenting.

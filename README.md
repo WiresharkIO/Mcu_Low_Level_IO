@@ -86,7 +86,23 @@ To find the exact pin-to-register or port mapping, the ATmega microcontroller da
 5. reasoning and observations for optimization based the analysis
 
 > $\color{blue}{\text{Basics}}$
-The processor can interact to data either from LOAD or STORE instruction.
-LOAD - loads data from memory to processors reg.
-STORE - stores from register to memory.
-In Assembly MOV isntruction is used to interact with data, but the problem is that a MOV cannot differentiate between different types or memory for example RAM or GPU or any other device such as a network with servers.. Assume all these devices have a particular address 0x1000200 now how will the processor differentiate which memory to interact with?
+
+$\color{yellow}{\text{Device/Memory Accessing}}$
+
+There are many instructions that read/write memory or device registers:
+- For example, x86: MOV, PUSH, POP, XCHG, CMP, arithmetic/logical ops with memory operands, etc.
+For example, ARM/RISC‑V: LD, ST, LDR, STR, etc.
+- All of these use addresses and addressing modes to access memory/ MMIO, but the problem is that it cannot differentiate between different types of memory for example RAM or GPU or NIC..
+- Assume all these devices have a particular address 0x1000200 now how will the processor differentiate which memory to interact with?
+
+
+It is basically solved in the system designing phase:
+
+1. The system designer assigns non‑overlapping address ranges for RAM and each MMIO device.
+
+2. Uses an address decoder and chip‑select signals, so that for a given address, exactly one device responds on the bus.
+
+3. In systems that also use port‑mapped I/O, some devices live in a separate I/O port space and are accessed with special I/O instructions (IN, OUT) instead of memory instructions.
+
+
+**$\color{yellow}{\text{Bit-wise operations}}$**

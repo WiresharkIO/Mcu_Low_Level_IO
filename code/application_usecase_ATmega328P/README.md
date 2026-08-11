@@ -42,7 +42,9 @@ The ATmega328P has 3 Timers:
 2. Timer1 (16 bit)
 3. Timer2 (8 bit)
 
-The 16 bit Timer1 provides a good range (0–65535 → max span = 65536 × 62.5 ns = 4.096 ms at prescaler 1), for latency measurement, so we use it to measure the time. 
+The 16 bit Timer1 provides a good range (0–65535 → max span = 65536 × 62.5 ns = 4.096 ms at prescaler 1), for latency measurement, so we use it to measure the time.
+
+Its better to tune prescaler value based on the application in hand, as if not done so the counter wraps after reaching its max value (overflow).
 
 
 

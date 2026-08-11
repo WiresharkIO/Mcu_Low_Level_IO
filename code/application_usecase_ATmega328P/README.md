@@ -33,8 +33,7 @@ The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per s
 - version - 2 Direct register level accessing of the same
 
 
-> References
-1. https://docs.arduino.cc/learn/programming/memory-guide/
-2. https://www.geeksforgeeks.org/computer-organization-architecture/difference-between-von-neumann-and-harvard-architecture/
+
+
 
 

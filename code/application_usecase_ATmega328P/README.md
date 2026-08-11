@@ -37,5 +37,15 @@ The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per s
 
 > $\color{blue}{\text{Basics}}$
 
+The ATmega328P has 3 Timers:
+1. Timer0 (8 bit)
+2. Timer1 (16 bit)
+3. Timer2 (8 bit)
+
+The 16 bit Timer1 provides a good range (0–65535 → max span = 65536 × 62.5 ns = 4.096 ms at prescaler 1), for latency measurement, so we use it to measure the time. 
+
+
+
+
 
 

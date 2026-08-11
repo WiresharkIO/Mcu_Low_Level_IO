@@ -1,7 +1,8 @@
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 
-> Traversing from user-code to address/memory
+> $\color{blue}{\text{Traversing from user-code to address/memory}}$
+
 
 - version - 1 Through the Arduino framework's source files
 
@@ -34,6 +35,7 @@ The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per s
 
 
 
+> $\color{blue}{\text{Basics}}$
 
 
 

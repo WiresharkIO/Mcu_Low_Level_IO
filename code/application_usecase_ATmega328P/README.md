@@ -34,6 +34,21 @@ The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per s
 - version - 2 Direct register level accessing of the same
 
 
+ ```arduino
+#define DDRB_ADDR   ((volatile uint8_t *)0x24)
+#define PORTB_ADDR  ((volatile uint8_t *)0x25)
+
+void setup() {
+  *DDRB_ADDR |= (1 << PORTB5);
+}
+
+void loop() {
+  *PORTB_ADDR |= (1 << PORTB5);
+  delay(500);
+  *PORTB_ADDR &= ~(1 << PORTB5);
+  delay(500);
+}
+```
 
 > $\color{blue}{\text{Latency comparison}}$
 <img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/ab2cdf1c-f15f-42d8-9166-7aad3f875d84" />

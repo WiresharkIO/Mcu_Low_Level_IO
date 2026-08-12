@@ -36,7 +36,8 @@ The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per s
 
 
 > $\color{blue}{\text{Latency comparison}}$
-<img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/7edd122b-c570-4124-addc-e79d1f1547cf" />
+<img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/ab2cdf1c-f15f-42d8-9166-7aad3f875d84" />
+
 
 
 > $\color{blue}{\text{Basics}}$

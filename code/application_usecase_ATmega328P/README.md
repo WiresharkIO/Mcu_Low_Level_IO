@@ -37,11 +37,19 @@ The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per s
 
 It is almost always important to refer datasheet when configuring or writing onto memory, and not take the address or register information from somewhere else on the internet.
 
-For this arduino uno board which has Atmega328p as a microcontroller - refer: https://www.microchip.com/en-us/product/atmega328p#Overview.
 
 Why?
 
-If the associated embedded application is not critical and doesn't lead to any catastrophe it's still fine to brainstorm with internet based values, but assume an application such as a FADEC system, which translates to full authority digital engine control 
+If the associated embedded application is not critical and doesn't lead to any catastrophe it's still fine to brainstorm with internet based values, but assume an application such as a FADEC system (watch: https://www.youtube.com/watch?v=f9jAtjBRkpE), which translates to full authority digital engine control in an aircraft, which allows no form of manual override nor manual controls, placing full authority over all of the operating parameters of the engine in the hands of the computer. In these cases one cannot brainstorm, and the answer must be deterministic and deterministic answers are available in the datasheets and reference manuals.
+
+
+<p align="center">
+  <img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/e97532f1-12ae-4c71-8188-6a241053d79b">
+  <br>
+  <em>Figure 1: A FADEC system (https://en.wikipedia.org/wiki/FADEC).
+</p>
+
+For this arduino uno board which has Atmega328p as a microcontroller - refer: https://www.microchip.com/en-us/product/atmega328p#Overview.
 
  ```arduino
 #define DDRB_ADDR   ((volatile uint8_t *)0x24)

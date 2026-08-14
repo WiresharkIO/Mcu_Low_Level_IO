@@ -5,7 +5,7 @@
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-- version - 1 Through the Arduino framework's source files
+$\color{blue}{\text{version - 1 Through the Arduino framework's source files}}$
 
  ```arduino
  void setup() {
@@ -20,7 +20,10 @@
  }
  ```
 
-<img width="1920" height="1080" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/b09769b3-760c-4263-871c-2ebd0209f6d9" />
+<!-- 
+<img width="1920" height="1080" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/b09769b3-760c-4263-871c-2ebd0209f6d9" /> 
+-->
+<img width="1920" height="1080" alt="sw_abstraction_flow" src="https://github.com/user-attachments/assets/13be01f1-42a2-4940-aba0-5c6b65ceea76" />
 
 Until now, the code uses simple human understandable way of performing a function.
 
@@ -33,7 +36,8 @@ The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per s
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-- version - 2 Direct register level accessing of the same
+
+$\color{blue}{\text{version - 2 Direct register level IO accessing}}$
 
 It is almost always important to refer datasheet when configuring or writing onto memory, and not take the address or register information from somewhere else on the internet.
 

@@ -3,6 +3,7 @@
 
 > $\color{blue}{\text{Traversing from user-code to address/memory}}$
 
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 - version - 1 Through the Arduino framework's source files
 
@@ -30,9 +31,17 @@ Until now, the code uses simple human understandable way of performing a functio
 The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per second. Each cycle lasts approximately $62.5\\text{ns}$) for this board, which makes one wonder how long will it take to perform a functionality with this sort of sw abstraction?, and how will it compare to alternate implementation with direct register accessing?, and when the application scales up could these difference in latency, memory and other resource parameters, produce the better sw in the optimization space (accepting the fact that the code reduces the readability)?
 
 
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 - version - 2 Direct register level accessing of the same
 
+It is almost always important to refer datasheet when configuring or writing onto memory, and not take the address or register information from somewhere else on the internet.
+
+For this arduino uno board which has Atmega328p as a microcontroller - refer: https://www.microchip.com/en-us/product/atmega328p#Overview.
+
+Why?
+
+If the associated embedded application is not critical and doesn't lead to any catastrophe it's still fine to brainstorm with internet based values, but assume an application such as a FADEC system, which translates to full authority digital engine control 
 
  ```arduino
 #define DDRB_ADDR   ((volatile uint8_t *)0x24)

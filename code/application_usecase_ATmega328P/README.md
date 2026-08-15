@@ -60,6 +60,11 @@ If the associated embedded application is not critical and doesn't lead to any c
 
 For this arduino uno board which has Atmega328p as a microcontroller - refer: https://www.microchip.com/en-us/product/atmega328p#Overview.
 
+
+<img width="1920" height="1080" alt="direct_reg_access_flow" src="https://github.com/user-attachments/assets/f5049b79-78b3-47d2-9cf9-8c1703fd8825" />
+
+
+
  ```arduino
 #define DDRB_ADDR   ((volatile uint8_t *)0x24)
 #define PORTB_ADDR  ((volatile uint8_t *)0x25)

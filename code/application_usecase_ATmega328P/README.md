@@ -1,11 +1,11 @@
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 
-> $\color{blue}{\text{Traversing from user-code to address/memory}}$
+$\color{blue}{\text{Traversing from user-code to address/memory}}$
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-$\color{blue}{\text{version - 1 Through the Arduino framework's source files}}$
+> $\color{blue}{\text{version - 1 Through the Arduino framework's source files}}$
 
  ```arduino
  void setup() {
@@ -37,7 +37,7 @@ The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per s
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 
-$\color{blue}{\text{version - 2 Direct register level IO accessing}}$
+> $\color{blue}{\text{version - 2 Direct register level IO accessing}}$
 
 It is almost always important to refer datasheet when configuring or writing onto memory, and not take the address or register information from somewhere else on the internet.
 
@@ -46,11 +46,18 @@ Why?
 
 If the associated embedded application is not critical and doesn't lead to any catastrophe it's still fine to brainstorm with internet based values, but assume an application such as a FADEC system (watch: https://www.youtube.com/watch?v=f9jAtjBRkpE), which translates to full authority digital engine control in an aircraft, which allows no form of manual override nor manual controls, placing full authority over all of the operating parameters of the engine in the hands of the computer. In these cases one cannot brainstorm, and the answer must be deterministic and deterministic answers are available in the datasheets and reference manuals.
 
-
 <p align="center">
-  <img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/e97532f1-12ae-4c71-8188-6a241053d79b">
+  <img
+    width="320"
+    height="240"
+    alt="FADEC system"
+    src="https://github.com/user-attachments/assets/e97532f1-12ae-4c71-8188-6a241053d79b"
+  >
   <br>
-  <em>Figure 1: A FADEC system (https://en.wikipedia.org/wiki/FADEC).
+  <em>
+    Figure 1: A FADEC system
+    (<a href="https://en.wikipedia.org/wiki/FADEC">Wikipedia</a>).
+  </em>
 </p>
 
 For this arduino uno board which has Atmega328p as a microcontroller - refer: https://www.microchip.com/en-us/product/atmega328p#Overview.
@@ -71,7 +78,9 @@ void loop() {
 }
 ```
 
+
 > $\color{blue}{\text{Latency comparison}}$
+
 <img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/ab2cdf1c-f15f-42d8-9166-7aad3f875d84" />
 
 

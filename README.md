@@ -26,7 +26,7 @@ In this primer, we see how memory mapped IO can be controlled by using **_direct
 
 This repo uses application which makes every embedded systems engineer feel good about themselves..
 
-"Blink LED at a particular rate" as the first use-case..
+"Blink LED at a particular rate" as the first use-case.. - as the application is simple it makes the understanding clearer as to why one would configure registers directly over sw abstraction flow.
 
 Then we will be looking into some embedded ai based applications, where we keep the model params constant but try to make the supporting firmware a bit more optimized by this approach (we don't know that yet for sure whether it will produce any effect or not, we need to evaluate it)..
 

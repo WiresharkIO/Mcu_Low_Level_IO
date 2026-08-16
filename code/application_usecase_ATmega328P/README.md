@@ -79,7 +79,9 @@ void loop() {
 
 $\color{blue}{\text{Latency comparison}}$
 
-<img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/ab2cdf1c-f15f-42d8-9166-7aad3f875d84" />
+<!--<img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/ab2cdf1c-f15f-42d8-9166-7aad3f875d84" />-->
+<img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/021472ef-27c8-460c-a16e-a8afaffdee8c" />
+
 
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />

@@ -93,12 +93,6 @@ void loop() {
 
 > $\color{yellow}{\text{Arduino IO interaction}}$
 
-This repo uses application which makes every embedded systems engineer feel good about themselves..
-
-"Blink LED at a particular rate" as the first use-case.. - as the application is simple it makes the understanding clearer as to why one would configure registers directly over sw abstraction flow.
-
-Then we will be looking into some embedded ai based applications, where we keep the model params constant but try to make the supporting firmware a bit more optimized by this approach (we don't know that yet for sure whether it will produce any effect or not, we need to evaluate it)..
-
 
 We employ Arduino Uno, for the first application as it is the most simplest board known for prototyping and experimenting.
 In Arduino Uno Board -> **we have ATmega328P microcontroller** --> with an 8-bit AVR microprocessor.

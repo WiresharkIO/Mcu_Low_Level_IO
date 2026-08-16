@@ -22,20 +22,33 @@ In this primer, we see how memory mapped IO can be controlled by using **_direct
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
+>  $\color{blue}{\text{Port-mapped I/O (PMIO)}}$ 
 
-> $\color{blue}{\text{Why this analysis what's the point?}}$
-
-- This primer will also enhance comfortability in referring datasheets, accessing addresses, defining pointer, and doing bitwise operations for bit manipulation in a register.
-
-- For resource constrained devices and applications that consumes significant flash, register level bit manipulation could cut corners in terms of flash utilization.
-  
-- This will tell that on bare metal how does any software perform, that is with just the interaction with the core nature of the hardware how does any functionality perform in terms of resource consumption.
+...
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-> $\color{blue}{\text{References:}}$
-1. https://docs.arduino.cc/learn/programming/memory-guide/
-2. https://www.geeksforgeeks.org/computer-organization-architecture/difference-between-von-neumann-and-harvard-architecture/
+>  $\color{blue}{\text{Summary}}$
+
+In a nutshell, MMIO / PMIO describes the hardware/CPU addressing mechanism: how the CPU reaches a peripheral register.
+
+1. MMIO: register appears at a memory/data-space address.
+2. PMIO: register has a separate I/O-port address and is accessed with special I/O instructions.
+
+
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
+
+
+> $\color{blue}{\text{Why this analysis, what's the point?}}$
+
+- This analysis compares high-level functions with direct register-level control to show the cost of software abstraction on a resource-constrained microcontroller.
+
+- For resource constrained devices and applications that consumes significant flash, register level bit manipulation could cut corners in terms of flash utilization.
+  
+- This will tell, that on bare metal how does any software perform, i.e. how an operation travels from code to a peripheral register, and what that interaction costs in execution time and memory resources.
+
+
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 
 > $\color{Red}{\text{TO DO:}}$
@@ -44,6 +57,8 @@ In this primer, we see how memory mapped IO can be controlled by using **_direct
 3. Adapting this to a medium sized application with reduced invocations to abstractions
 4. compare latencies, flash (if possible power) across Arduino, STM32 (or ESP32) based platforms
 5. reasoning and observations for optimization based the analysis
+
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 > $\color{blue}{\text{Basics}}$
 
@@ -75,3 +90,9 @@ This repo uses application which makes every embedded systems engineer feel good
 Then we will be looking into some embedded ai based applications, where we keep the model params constant but try to make the supporting firmware a bit more optimized by this approach (we don't know that yet for sure whether it will produce any effect or not, we need to evaluate it)..
 
 -->
+
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
+
+> $\color{blue}{\text{References:}}$
+1. https://docs.arduino.cc/learn/programming/memory-guide/
+2. https://www.geeksforgeeks.org/computer-organization-architecture/difference-between-von-neumann-and-harvard-architecture/

@@ -1,11 +1,8 @@
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
+$\color{blue}{\text{Traversing from user-code to registers}}$
 
-$\color{blue}{\text{Traversing from user-code to address/memory}}$
-
-<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
-
-> $\color{blue}{\text{version - 1 Through the Arduino framework's source files}}$
+> $\color{yellow}{\text{version - 1 Through the Arduino framework's source files}}$
 
  ```arduino
  void setup() {
@@ -32,10 +29,7 @@ Until now, the code uses simple human understandable way of performing a functio
 The $\color{green}{\text{Clock Speed	is 16 MHz}}$ (16 million clock cycles per second. Each cycle lasts approximately $62.5\\text{ns}$) for this board, which makes one wonder how long will it take to perform a functionality with this sort of sw abstraction?, and how will it compare to alternate implementation with direct register accessing?, and when the application scales up could these difference in latency, memory and other resource parameters, produce the better sw in the optimization space (accepting the fact that the code reduces the readability)?
 
 
-<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
-
-
-> $\color{blue}{\text{version - 2 Direct register level IO accessing}}$
+> $\color{yellow}{\text{version - 2 Direct register level IO accessing}}$
 
 It is almost always important to refer datasheet when configuring or writing onto memory, and not take the address or register information from somewhere else on the internet.
 
@@ -81,14 +75,17 @@ void loop() {
 }
 ```
 
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-> $\color{blue}{\text{Latency comparison}}$
+$\color{blue}{\text{Latency comparison}}$
 
 <img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/ab2cdf1c-f15f-42d8-9166-7aad3f875d84" />
 
 
+<img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
-> $\color{blue}{\text{Basics}}$
+
+$\color{blue}{\text{Basics}}$
 
 
 > $\color{yellow}{\text{Arduino IO interaction}}$

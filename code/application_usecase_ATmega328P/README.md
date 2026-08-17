@@ -136,6 +136,8 @@ The 16 bit Timer1 provides a good range (0–65535 → max span = 65536 × 62.5 
 Its better to tune prescaler value based on the application in hand, as if not done so the counter wraps after reaching its max value (overflow).
 
 
+> $\color{yellow}{\text{Disassembly}}$
+In embedded computing or in general computing, disassembly converts raw machine code (binary files) back into human-readable assembly language. It tells the exact low-level instructions (for example, sbi/cbi/lds/IN,..) a processor executes, revealing how software functions, how data moves through registers and memory, and how control flows without needing the original source code.
 
 
 

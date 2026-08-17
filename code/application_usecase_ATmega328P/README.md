@@ -57,7 +57,9 @@ For this arduino uno board which has Atmega328p as a microcontroller - refer: ht
 
 <img width="1920" height="1080" alt="direct_reg_access_flow" src="https://github.com/user-attachments/assets/f5049b79-78b3-47d2-9cf9-8c1703fd8825" />
 
+> 1.1 MMIO-style access:
 
+The IO registers are mapped into the processor’s normal data-memory address space, so they can be accessed using normal data-memory instructions. But analysing disassembly revealed that due to the built-in feature of the AVR-GCC compiler called Instruction-Level Optimization, the instructions used were special instructions sbi (set-bit-in IO register) and cbi (clear-bit-in IO register).
 
  ```arduino
 #define DDRB_ADDR   ((volatile uint8_t *)0x24)
@@ -75,6 +77,51 @@ void loop() {
 }
 ```
 
+> 1.2 PMIO-style accessing:
+
+A distinct I/O-address view, accessed with I/O-specific instructions such as IN, OUT, SBI, and CBI. In the conventional terminology, this is PMIO-like / port-mapped access. To do this type of access, we go for inline-assembly based coding style.
+
+ ```arduino
+#include <avr/io.h>
+#include <util/delay.h>
+
+static inline void led_init_io(void) {
+  asm volatile (
+    "sbi %0, %1"
+    :
+    : "I" (_SFR_IO_ADDR(DDRB)), "I" (DDB5)
+  );
+}
+
+static inline void led_on_io(void) {
+  asm volatile (
+    "sbi %0, %1"
+    :
+    : "I" (_SFR_IO_ADDR(PORTB)), "I" (PORTB5)
+  );
+}
+
+static inline void led_off_io(void) {
+  asm volatile (
+    "cbi %0, %1"
+    :
+    : "I" (_SFR_IO_ADDR(PORTB)), "I" (PORTB5)
+  );
+}
+
+void setup() {
+  led_init_io();
+}
+
+void loop() {
+  led_on_io();
+  _delay_ms(500);
+
+  led_off_io();
+  _delay_ms(500);
+}
+```
+
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
 $\color{blue}{\text{Latency comparison}}$
@@ -82,7 +129,7 @@ $\color{blue}{\text{Latency comparison}}$
 <!--<img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/ab2cdf1c-f15f-42d8-9166-7aad3f875d84" />-->
 <img width="3579" height="1769" alt="arduino_io_latency" src="https://github.com/user-attachments/assets/021472ef-27c8-460c-a16e-a8afaffdee8c" />
 
-
+As we had seen that the underlying instructions for both MMIO and PMIO/IO-space register accessing utilizes the I/O-space instructions sbi and cbi, the latency was found to be similar. However the flash consumption was less in-case of inline-assembly based accessing.
 
 <img width="1000" height="50" alt="github_asthetics_copy" src="https://github.com/user-attachments/assets/a6184963-c508-4fad-959d-255393f54737" />
 
